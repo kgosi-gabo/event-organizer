@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | EventHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link hewf="https://font.googleapis.com/css2?faimly=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Contact EventHub</h1>
+        <p>We'd love to heae from you. Reach out with feedback or booking inquires!</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Events</a>
+            <a href="feedback.html">Feedbacl</a>
+        </nav>
+    </header>
+
+    <section class="feedback-section">
+        <h2>Send Us a Message</h2>
+        <p>Please fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form action="https://formspree.io/f/37419616" method="POST">
+            <!--Redirect to than you page-->
+            <input type="hidden" name="_redirect" value="thankyou.html">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="e.g., Jane Doe" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="e.g., jane@example.com" required>
+
+            <label for="phone">Phone Number (Optional):</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., +267 71 234 567">
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Let us know how we can help..." required></textarea>
+
+            <button type="submit">Send Message</button>
+            <button onclic="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 EventHub | Designed by G.K.G</P>
+    </footer>
+
+</body>
+</html
