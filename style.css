@@ -142,4 +142,27 @@ form button:hover { /* Fixed typo */
     background-color: #e84118;
 }
 
+.team-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Additional fixes for other sections follow the same approach. */
