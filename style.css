@@ -203,3 +203,19 @@ form button:hover { /* Fixed typo */
 }
 
 /* Additional fixes for other sections follow the same approach. */
+
+
+/* Reduce the size of the images in the Event Highlights section to profile photo size */
+.gallery-row img {
+    width: 150px; /*Adjust the size as needed */
+    height: 150px; /*Maintain a square shape */
+    border-radius: 50%; /*Make the image cicular */
+    object-fit: cover; /*Ensure the images fits well inside the circular */
+    margin: 0 auto; /*Center the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Optional, for subtle shadow */
+}
+
+/*Optional: Adjust hover effect for profile pictures */
+.gallery-rover: hover {
+    transform: scale(1.05); /*Slight zoom effect on hover */
+}
