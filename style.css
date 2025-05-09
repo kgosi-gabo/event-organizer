@@ -219,3 +219,20 @@ form button:hover { /* Fixed typo */
 .gallery-rover: hover {
     transform: scale(1.05); /*Slight zoom effect on hover */
 }
+
+/* Profile-Style Events Highlights images on the Event pages */
+.gallery-grid img {
+    width: 150px; /*Set width to profile photo size */
+    height: 150px; /*Set height to match width for square */
+    border-radius: 50%; /*Make the image circular */
+    object-fit: cover; /*Crop and fit image inside the circle */
+    magin: 10px auto; /*Space and center the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Optional shadow */
+    transition: transform 0.3s ease; /*Smoot hover effect */
+}
+
+.gallery-grid img: hover {
+    transform: scale(1.05); /*Slight zoom on hover */
+}
+    
+    
