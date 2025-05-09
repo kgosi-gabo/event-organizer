@@ -226,7 +226,7 @@ form button:hover { /* Fixed typo */
     height: 150px; /*Set height to match width for square */
     border-radius: 50%; /*Make the image circular */
     object-fit: cover; /*Crop and fit image inside the circle */
-    magin: 10px auto; /*Space and center the image */
+    margin: 10px auto; /*Space and center the image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Optional shadow */
     transition: transform 0.3s ease; /*Smoot hover effect */
 }
@@ -249,5 +249,98 @@ form button:hover { /* Fixed typo */
     font-weight: 600;
 }
 
-    
-    
+    /* Youthful CTA buttons */
+.btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 111, 97, 0.4);
+}
+
+.btn:hover {
+    background-color: #e84118;
+    transform: scale(1.05);
+}
+
+/* Hover bounce on images for youth appeal */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+ .gallery-item p {
+    font-size: 1rem;
+    color: #2d3436;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover p {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+.confetti-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(calc(360 * var(--i)), 90%, 60%);
+    top: -10px;
+    left: calc(100% * var(--i));
+    animation: fall 4s linear infinite;
+    opacity: 0.7;
+    border-radius: 50%;
+}
+
+/* Randomize position and color for each */
+.confetti:nth-child(1) { --i: 0.1; }
+.confetti:nth-child(2) { --i: 0.2; }
+.confetti:nth-child(3) { --i: 0.3; }
+.confetti:nth-child(4) { --i: 0.4; }
+.confetti:nth-child(5) { --i: 0.5; }
+.confetti:nth-child(6) { --i: 0.6; }
+.confetti:nth-child(7) { --i: 0.7; }
+.confetti:nth-child(8) { --i: 0.8; }
+.confetti:nth-child(9) { --i: 0.9; }
+.confetti:nth-child(10) { --i: 1.0; }
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+   
