@@ -48,13 +48,14 @@ nav {
 nav a {
     margin: 0 14px;
     font-weight: 600;
-    color: #2f3542;
+    color: #f0f4f8; /* Softer light color for contrast */
     font-size: 1rem;
     padding: 6px 10px;
-    background-color: #ffeaa7;
+    background-color: #2c5364; /* Matches the header theme */
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 nav a:hover { /* Fixed typo */
     background-color: #ff6f61;
