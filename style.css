@@ -234,5 +234,20 @@ form button:hover { /* Fixed typo */
 .gallery-grid img: hover {
     transform: scale(1.05); /*Slight zoom on hover */
 }
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #2d3436;
+    font-weight: 600;
+}
+
     
     
