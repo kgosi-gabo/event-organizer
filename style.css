@@ -19,7 +19,7 @@ a:hover {
 /*====== Header Section ====== */
 header {
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Updated */
-    color: #2d3436;
+    color: white;
     padding: 40px 20px;
     text-align: center;
     border-bottom: 5px solid #ff6f61;
