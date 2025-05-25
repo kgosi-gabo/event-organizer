@@ -337,3 +337,18 @@ form button:hover {
         padding: 0 1rem;
     }
 }
+
+.home-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.home-gallery img:hover {
+    transform: scale(1.05);
+}
