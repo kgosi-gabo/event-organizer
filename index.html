@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet">
-    <!-- Inline CSS for passport-style thumbnails in the Event Highlights -->
+    <!-- Inline CSS for passport-style thumbnails -->
     <style>
+      /* Container layout */
+      .event-highlights .highlight-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+      }
+      /* Passport-style thumbnails */
       .event-highlights .highlight-item img {
         width: 80px;
         height: 80px;
@@ -71,15 +80,15 @@
           <h2>Event Highlights</h2>
           <div class="highlight-gallery">
             <div class="highlight-item">
-              <img src="event1.jpg" alt="event 1">
+              <img src="event1.jpg" alt="Event 1">
               <p>Summer Wedding Expo</p>
             </div>
             <div class="highlight-item">
-              <img src="event2.jpg" alt="event 2">
+              <img src="event2.jpg" alt="Event 2">
               <p>Corporate Networking Night</p>
             </div>
             <div class="highlight-item">
-              <img src="event3.jpg" alt="event 3">
+              <img src="event3.jpg" alt="Event 3">
               <p>Charity Gala 2025</p>
             </div>
           </div>
