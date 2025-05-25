@@ -352,3 +352,17 @@ form button:hover {
 .home-gallery img:hover {
     transform: scale(1.05);
 }
+.home-gallery img {
+    width: 100px; /* Smaller size */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.home-gallery img:hover {
+    transform: scale(1.05);
+}
