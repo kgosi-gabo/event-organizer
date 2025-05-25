@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet">
+    <!-- Inline CSS for passport-style thumbnails -->
+    <style>
+      .event-highlights .highlight-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 0.5rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+      }
+      .event-highlights .highlight-item img:hover {
+        transform: scale(1.05);
+      }
+    </style>
 </head>
 <body>
     <header>
@@ -67,15 +83,6 @@
               <p>Charity Gala 2025</p>
             </div>
           </div>
-        </section>
-
-                <section class="gallery-preview">
-            <h2>Event Highlights</h2>
-            <div class="gallery-row">
-                <img src="event 1.jpg" alt="event 1">
-                <img src="event 2.jpg" alt="event 2">
-                <img src="event 3.jpg" alt="event 3">
-            </div>
         </section>
 
         <!-- Creative, Curious & Learning Every Day -->
