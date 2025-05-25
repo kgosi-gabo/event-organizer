@@ -1,9 +1,13 @@
-body {
+/* ===== Global Reset and Fullscreen ===== */
+html, body {
+    height: 100%;
+    width: 100%;
     margin: 0;
-    font-family: 'Quicksand', sans-serif; /* Fixed typo */
+    font-family: 'Quicksand', sans-serif;
     background-color: #fff8f0;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 a {
@@ -18,13 +22,12 @@ a:hover {
 
 /*====== Header Section ====== */
 header {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Updated */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: white;
     padding: 40px 20px;
     text-align: center;
     border-bottom: 5px solid #ff6f61;
 }
-
 
 header h1 {
     margin: 0;
@@ -37,7 +40,7 @@ header p {
     margin: 10px 0 20px;
     font-size: 1.2rem;
     font-style: italic;
-    color: pitch;
+    color: #eee; /* Fixed from 'pitch' */
 }
 
 /*====== Navigation ====== */
@@ -48,16 +51,15 @@ nav {
 nav a {
     margin: 0 14px;
     font-weight: 600;
-    color: #f0f4f8; /* Softer light color for contrast */
+    color: #f0f4f8;
     font-size: 1rem;
     padding: 6px 10px;
-    background-color: #2c5364; /* Matches the header theme */
+    background-color: #2c5364;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-
-nav a:hover { /* Fixed typo */
+nav a:hover {
     background-color: #ff6f61;
     color: white;
 }
@@ -73,7 +75,7 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    font-family: 'Playfair Display', serif; /* Fixed missing comma */
+    font-family: 'Playfair Display', serif;
     color: #ff6f61;
 }
 
@@ -106,7 +108,9 @@ section p {
 }
 
 form {
-    max-width: 500px; /* Fixed typo */
+    max-width: 90%;
+    width: 100%;
+    max-width: 500px;
     margin: 0 auto;
     text-align: left;
 }
@@ -137,13 +141,14 @@ form button {
     font-size: 1rem;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Fixed typo */
+    transition: background-color 0.3s;
 }
 
-form button:hover { /* Fixed typo */
+form button:hover {
     background-color: #e84118;
 }
 
+/*====== Team and Gallery ======*/
 .team-container {
     display: flex;
     gap: 2rem;
@@ -187,54 +192,23 @@ form button:hover { /* Fixed typo */
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
     padding: 0 1rem;
 }
 
 .gallery-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.03);
-}
-
-/* Additional fixes for other sections follow the same approach. */
-
-
-/* Reduce the size of the images in the Event Highlights section to profile photo size */
-.gallery-row img {
-    width: 150px; /*Adjust the size as needed */
-    height: 150px; /*Maintain a square shape */
-    border-radius: 50%; /*Make the image cicular */
-    object-fit: cover; /*Ensure the images fits well inside the circular */
-    margin: 0 auto; /*Center the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Optional, for subtle shadow */
-}
-
-/*Optional: Adjust hover effect for profile pictures */
-.gallery-rover: hover {
-    transform: scale(1.05); /*Slight zoom effect on hover */
-}
-
-/* Profile-Style Events Highlights images on the Event pages */
-.gallery-grid img {
-    width: 150px; /*Set width to profile photo size */
-    height: 150px; /*Set height to match width for square */
-    border-radius: 50%; /*Make the image circular */
-    object-fit: cover; /*Crop and fit image inside the circle */
-    margin: 10px auto; /*Space and center the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Optional shadow */
-    transition: transform 0.3s ease; /*Smoot hover effect */
-}
-
-.gallery-grid img: hover {
-    transform: scale(1.05); /*Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 .gallery-item {
@@ -251,7 +225,17 @@ form button:hover { /* Fixed typo */
     font-weight: 600;
 }
 
-    /* Youthful CTA buttons */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover p {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* CTA Buttons */
 .btn {
     background-color: #ff6f61;
     color: #fff;
@@ -270,24 +254,7 @@ form button:hover { /* Fixed typo */
     transform: scale(1.05);
 }
 
-/* Hover bounce on images for youth appeal */
-.gallery-item:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease-in-out;
-}
-
- .gallery-item p {
-    font-size: 1rem;
-    color: #2d3436;
-    font-weight: 600;
-    margin-top: 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.gallery-item:hover p {
-    color: #ff6f61;
-    transform: scale(1.1);
-}
+/* Animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -299,6 +266,9 @@ form button:hover { /* Fixed typo */
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Confetti Animation */
 .confetti-wrapper {
     position: fixed;
     width: 100%;
@@ -322,7 +292,6 @@ form button:hover { /* Fixed typo */
     border-radius: 50%;
 }
 
-/* Randomize position and color for each */
 .confetti:nth-child(1) { --i: 0.1; }
 .confetti:nth-child(2) { --i: 0.2; }
 .confetti:nth-child(3) { --i: 0.3; }
@@ -345,4 +314,26 @@ form button:hover { /* Fixed typo */
     }
 }
 
-   
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    .team-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    form {
+        padding: 0 1rem;
+    }
+}
